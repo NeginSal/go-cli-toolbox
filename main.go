@@ -33,7 +33,7 @@ func main() {
 		// checking the entered option
 		switch choice {
 		case 1:
-			fmt.Println("Calculator selected.")
+			calculator()
 		case 2:
 			fmt.Println("BMI calculation selected.")
 		case 3:
