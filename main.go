@@ -35,7 +35,7 @@ func main() {
 		case 1:
 			calculator()
 		case 2:
-			fmt.Println("BMI calculation selected.")
+			bmi()
 		case 3:
 			fmt.Println("Time conversion selected.")
 		case 4:
