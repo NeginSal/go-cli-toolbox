@@ -39,7 +39,7 @@ func main() {
 		case 3:
 			fmt.Println("Time conversion selected.")
 		case 4:
-			fmt.Println("Age calculation selected.")
+			age()
 		case 5:
 			fmt.Println("Unit conversion selected.")
 		case 0:
