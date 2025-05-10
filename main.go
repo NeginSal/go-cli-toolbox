@@ -41,7 +41,7 @@ func main() {
 		case 4:
 			age()
 		case 5:
-			fmt.Println("Unit conversion selected.")
+			unitConverter()
 		case 0:
 			fmt.Println("Exiting the program. Goodbye! 👋")
 			return
