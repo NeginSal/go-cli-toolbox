@@ -37,7 +37,7 @@ func main() {
 		case 2:
 			bmi()
 		case 3:
-			fmt.Println("Time conversion selected.")
+			dateConverter()
 		case 4:
 			age()
 		case 5:
