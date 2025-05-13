@@ -6,19 +6,22 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
+	"github.com/fatih/color"
 )
 
 func main() {
 	for {
-		fmt.Println("Available tools")
-		fmt.Println("1. Simple Calculator")
-		fmt.Println("2. Calculate BMI")
-		fmt.Println("3. Time conversion (local time <-> UTC)")
-		fmt.Println("4. Calculate age")
-		fmt.Println("5. Unit conversion (e.g. , kg <-> lb)")
-		fmt.Println("0. Exit")
-
-		fmt.Println("Please enter your option: ")
+		color.Cyan(" 🛠️  Available tools:")
+		fmt.Println()
+		color.Yellow(" 1. Simple Calculator")
+		color.Yellow(" 2. Calculate BMI ")
+		color.Yellow(" 3. Time conversion (local time <-> UTC) ")
+		color.Yellow(" 4. Calculate age ")
+		color.Yellow(" 5. Unit conversion (e.g. , kg <-> lb) ")
+		color.Yellow(" 0. Exit ")
+		fmt.Println()
+		color.Cyan("Please enter your option: ")
 
 		// reading input from the user
 		reader := bufio.NewReader(os.Stdin)
@@ -26,7 +29,7 @@ func main() {
 		choice, err := strconv.Atoi(strings.TrimSpace(input))
 
 		if err != nil {
-			fmt.Println("❌ Invalid input. Please enter only numbers.")
+			color.Red("❌ Invalid input. Please enter only numbers.")
 			continue
 		}
 
@@ -43,10 +46,11 @@ func main() {
 		case 5:
 			unitConverter()
 		case 0:
-			fmt.Println("Exiting the program. Goodbye! 👋")
+			fmt.Println()
+			color.Green("Exiting the program. Goodbye! 👋")
 			return
 		default:
-			fmt.Println("❌ Invalid option. Please enter a valid number.")
+			color.Red("❌ Invalid option. Please enter a valid number.")
 		}
 	}
 }
